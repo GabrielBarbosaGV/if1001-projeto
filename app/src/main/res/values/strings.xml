@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Projeto de P3</string>
+    <string name="activity_sequence_string">activity_sequence_string</string>
 </resources>

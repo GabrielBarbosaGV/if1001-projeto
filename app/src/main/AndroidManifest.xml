@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.projeto">
+    package="br.ufpe.cin.if1001.activities">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoDeP3">
-        <activity android:name=".MainActivity">
+        <activity android:name="br.ufpe.cin.if1001.example.br.ufpe.cin.if1001.projeto.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
