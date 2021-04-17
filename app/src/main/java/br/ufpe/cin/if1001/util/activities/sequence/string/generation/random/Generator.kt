@@ -3,10 +3,10 @@ package br.ufpe.cin.if1001.util.activities.sequence.string.generation.random
 class Generator(private val possibleActivityNames: List<String>) {
 
     companion object {
-        private val amountBelowOneErrorMessage = "Número de quantidade menor do que um fornecido," +
+        private const val amountBelowOneErrorMessage = "Número de quantidade menor do que um fornecido," +
                 " quando maior ou igual a um é necessário"
 
-        private val emptyPossibilityListErrorMessage = "Lista com possíveis nomes de activities" +
+        private const val emptyPossibilityListErrorMessage = "Lista com possíveis nomes de activities" +
                 " não pode estar vazia"
     }
 
