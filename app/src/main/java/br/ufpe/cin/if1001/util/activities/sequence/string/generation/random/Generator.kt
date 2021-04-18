@@ -18,8 +18,6 @@ class Generator(private val possibleActivityNames: List<String>) {
     fun generateForAmount(amount: Int): String {
         if (amount < 1) throw IllegalArgumentException(amountBelowOneErrorMessage)
 
-        return (1..amount).joinToString {
-            possibleActivityNames.random()
-        }
+        return (1..amount).joinToString(", ") { possibleActivityNames.random() }
     }
 }
