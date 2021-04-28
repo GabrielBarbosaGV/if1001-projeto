@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoDeP3">
-        <activity android:name="br.ufpe.cin.if1001.example.br.ufpe.cin.if1001.projeto.MainActivity">
+        <activity android:name=".DisplayActivity"></activity>
+        <activity android:name=".ClickButtonActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
