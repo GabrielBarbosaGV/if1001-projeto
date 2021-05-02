@@ -1,6 +1,7 @@
 package br.ufpe.cin.if1001.activities
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AlphaAnimation
@@ -24,8 +25,17 @@ class DisplayActivity : AppCompatActivity() {
     private fun proceed() {
         binding.apply {
             webView.loadUrl(preferencesUrlOrDefault())
-            button.manipulateOpacity()
+            button.configureCustomizeButton()
         }
+    }
+
+    private fun Button.configureCustomizeButton() {
+        manipulateOpacity()
+        setCustomizeListener()
+    }
+
+    private fun Button.setCustomizeListener() = setOnClickListener {
+        startActivity(Intent(context, CustomizationActivity::class.java))
     }
 
     private fun preferencesUrlOrDefault() = getPreferences(Context.MODE_PRIVATE)
@@ -36,6 +46,6 @@ class DisplayActivity : AppCompatActivity() {
     private fun alphaAnimation() = AlphaAnimation(0f, 1f).apply {
         duration = Default.opacityAnimationDurationForDisplayActivity
         startOffset = Default.opacityAnimationOffsetForDisplayActivity
-        fillAfter = true
+        fillAfter = Default.fillAfterForDisplayActivity
     }
 }

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun proceed() {
-        startProperActivities(getActivitySequenceString())
+        startProperActivities()
     }
 
     private fun getActivitySequenceString(): String {
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                 .commaJoin()
     }
 
-    private fun startProperActivities(activityNames: String) {
+    private fun startProperActivities() {
         startNextActivityInChain(getActivitySequenceString())
     }
 }
